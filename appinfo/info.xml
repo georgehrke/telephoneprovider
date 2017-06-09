@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
+      xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
+    <id>telephoneprovider</id>
+    <name>Telephone Provider</name>
+    <summary>Provides tel:// links in the contacts Menu</summary>
+    <description><![CDATA[This app checks your contacts for telephone numbers and provides tel:// links in the new Nextcloud 12 contacts menu.]]></description>
+    <licence>agpl</licence>
+    <author mail="georg-dev@ehrke.email" homepage="https://georg.coffee">Georg Ehrke</author>
+    <version>0.0.1</version>
+    <namespace>TelephoneProvider</namespace>
+    <category>social</category>
+    <bugs>https://github.com/georgehrke/nextcloud-telephoneProvider/issues</bugs>
+    <dependencies>
+        <nextcloud min-version="12" max-version="13"/>
+    </dependencies>
+    <contactsmenu>
+        <provider>OCA\TelephoneProvider\TelephoneProvider</provider>
+    </contactsmenu>
+</info>
