@@ -2,9 +2,9 @@
 <info xmlns:xsi= "http://www.w3.org/2001/XMLSchema-instance"
       xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
     <id>telephoneprovider</id>
-    <name>Telephone Provider</name>
-    <summary>Provides tel:// links in the contacts Menu</summary>
-    <description><![CDATA[This app checks your contacts for telephone numbers and provides tel:// links in the new Nextcloud 12 contacts menu.]]></description>
+    <name>Telephone Provider for ContactsMenu</name>
+    <summary>Provides tel:// links in the ContactsMenu</summary>
+    <description><![CDATA[This app checks your contacts for telephone numbers and provides tel:// links in the new Nextcloud 12 ContactsMenu.]]></description>
     <licence>agpl</licence>
     <author mail="georg-dev@ehrke.email" homepage="https://georg.coffee">Georg Ehrke</author>
     <version>0.0.1</version>
