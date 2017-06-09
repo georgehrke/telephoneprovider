@@ -34,6 +34,7 @@ before_install:
     # install core
     - cd ../
     - git clone https://github.com/nextcloud/server.git --recursive --depth 1 -b $CORE_BRANCH nextcloud
+    - mv nextcloud-telephoneprovider telephoneprovider
     - mv telephoneprovider nextcloud/apps/
 
 before_script:
