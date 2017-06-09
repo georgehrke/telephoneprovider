@@ -4,6 +4,15 @@ language: php
 php:
     - 5.6
     - 7
+    - 7.1
+
+addons:
+  apt:
+    packages:
+    - mysql-server-5.6
+    - mysql-client-core-5.6
+    - mysql-client-5.6
+
 env:
     global:
         - CORE_BRANCH=stable12
@@ -23,18 +32,17 @@ matrix:
     fast_finish: true
 
 before_install:
-    # enable a display for running JavaScript tests
-    - export DISPLAY=:99.0
-    - sh -e /etc/init.d/xvfb start
-    - if [[ "$DB" == 'mysql' ]]; then sudo apt-get -y install mariadb-server; fi
-    - nvm install 6
-    - npm install -g npm@latest
-    - make
-    - make appstore
+    # download custom version of phpunit
+    - cd ../../
+    - wget https://phar.phpunit.de/phpunit-5.7.phar
+    - chmod +x phpunit-5.7.phar
+    - mkdir bin
+    - sudo mv phpunit-5.7.phar bin/phpunit
+    - export PATH="$PWD/bin:$PATH"
     # install core
-    - cd ../
+    - cd georgehrke
     - git clone https://github.com/nextcloud/server.git --recursive --depth 1 -b $CORE_BRANCH nextcloud
-    - mv nextcloud-telephoneprovider telephoneprovider
+    - mv nextcloud-telephoneProvider telephoneprovider
     - mv telephoneprovider nextcloud/apps/
 
 before_script:
@@ -50,10 +58,12 @@ before_script:
     - cd apps/telephoneprovider
 
 script:
+    - make
     - make test
+
+after_success:
+  - wget https://scrutinizer-ci.com/ocular.phar
+  - php ocular.phar code-coverage:upload --format=php-clover build/php-unit.clover
 
 after_failure:
     - cat ../../data/nextcloud.log
-
-addons:
-    firefox: "latest"
