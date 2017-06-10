@@ -1,7 +1,7 @@
 # :telephone_receiver: Telephone Provider for Nextcloud's ContactsMenu
-[![Build Status](https://travis-ci.org/georgehrke/nextcloud-telephoneProvider.svg?branch=master)](https://travis-ci.org/georgehrke/nextcloud-telephoneProvider)
-[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/georgehrke/nextcloud-telephoneProvider/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/georgehrke/nextcloud-telephoneProvider/?branch=master)
-[![Code Coverage](https://scrutinizer-ci.com/g/georgehrke/nextcloud-telephoneProvider/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/georgehrke/nextcloud-telephoneProvider/?branch=master)
+[![Build Status](https://travis-ci.org/georgehrke/telephoneprovider.svg?branch=master)](https://travis-ci.org/georgehrke/telephoneprovider)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/georgehrke/telephoneprovider/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/georgehrke/telephoneprovider/?branch=master)
+[![Code Coverage](https://scrutinizer-ci.com/g/georgehrke/telephoneprovider/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/georgehrke/telephoneprovider/?branch=master)
 
 This app searches your contacts for their phone numbers and shows `tel://` links in Nextcloud's new ContactsMenu, so you can call them right away.
 
