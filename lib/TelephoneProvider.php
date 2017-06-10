@@ -45,6 +45,7 @@ class TelephoneProvider implements IProvider {
 	/**
 	 * @param IActionFactory $actionFactory
 	 * @param IURLGenerator $urlGenerator
+	 * @param IL10N $l10n
 	 */
 	public function __construct(IActionFactory $actionFactory, IURLGenerator $urlGenerator, IL10N $l10n) {
 		$this->actionFactory = $actionFactory;
