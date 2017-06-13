@@ -57,7 +57,6 @@ before_script:
     - cd apps/telephoneprovider
 
 script:
-    - make
     - make test
 
 after_success:
