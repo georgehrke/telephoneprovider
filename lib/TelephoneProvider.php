@@ -67,7 +67,7 @@ class TelephoneProvider implements IProvider {
 			$label = $this->l10n->t('Call %s', [$telephoneNumber]);
 
 			$iconUrl = $this->urlGenerator->getAbsoluteURL($this->urlGenerator->imagePath('telephoneprovider', 'call.svg'));
-			$callUrl = 'tel://' . preg_replace('/[^\+0-9]/s', '', $telephoneNumber);
+			$callUrl = 'tel:' . preg_replace('/[^\+0-9]/s', '', $telephoneNumber);
 
 			$action = $this->actionFactory->newLinkAction($iconUrl, $label, $callUrl);
 			$entry->addAction($action);

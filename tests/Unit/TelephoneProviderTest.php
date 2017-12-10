@@ -94,7 +94,7 @@ class TelephoneProviderTest extends TestCase {
 
 		$this->actionFactory->expects($this->at(0))
 			->method('newLinkAction')
-			->with('absolute_url_1', 'localized_1', 'tel://+49000111222333')
+			->with('absolute_url_1', 'localized_1', 'tel:+49000111222333')
 			->will($this->returnValue($this->action1));
 
 		$this->entry->expects($this->at(1))
@@ -145,12 +145,12 @@ class TelephoneProviderTest extends TestCase {
 
 		$this->actionFactory->expects($this->at(0))
 			->method('newLinkAction')
-			->with('absolute_url_1', 'localized_1', 'tel://+49000111222333')
+			->with('absolute_url_1', 'localized_1', 'tel:+49000111222333')
 			->will($this->returnValue($this->action1));
 
 		$this->actionFactory->expects($this->at(1))
 			->method('newLinkAction')
-			->with('absolute_url_2', 'localized_2', 'tel://+49111222333444')
+			->with('absolute_url_2', 'localized_2', 'tel:+49111222333444')
 			->will($this->returnValue($this->action2));
 
 		$this->entry->expects($this->at(1))
@@ -202,9 +202,9 @@ class TelephoneProviderTest extends TestCase {
 
 	public function dataStripsPhoneNumber() {
 		return [
-			['+49 000 111 222 333', 'tel://+49000111222333'],
-			['+49 000 (111) 222 333', 'tel://+49000111222333'],
-			['000 111 222 333', 'tel://000111222333'],
+			['+49 000 111 222 333', 'tel:+49000111222333'],
+			['+49 000 (111) 222 333', 'tel:+49000111222333'],
+			['000 111 222 333', 'tel:000111222333'],
 		];
 	}
 }
