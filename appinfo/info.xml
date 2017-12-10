@@ -3,16 +3,16 @@
       xsi:noNamespaceSchemaLocation="https://apps.nextcloud.com/schema/apps/info.xsd">
     <id>telephoneprovider</id>
     <name>Telephone Provider for ContactsMenu</name>
-    <summary>Provides tel:// links in the ContactsMenu</summary>
-    <description><![CDATA[This app checks your contacts for telephone numbers and provides tel:// links in the new Nextcloud 12 ContactsMenu.]]></description>
+    <summary>Provides tel: links in the ContactsMenu</summary>
+    <description><![CDATA[This app checks your contacts for telephone numbers and provides tel: links in the new Nextcloud 12 ContactsMenu.]]></description>
     <licence>agpl</licence>
     <author mail="georg-dev@ehrke.email" homepage="https://georg.coffee">Georg Ehrke</author>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <namespace>TelephoneProvider</namespace>
     <category>social</category>
     <bugs>https://github.com/georgehrke/nextcloud-telephoneProvider/issues</bugs>
     <dependencies>
-        <nextcloud min-version="12" max-version="13"/>
+        <nextcloud min-version="12" max-version="14"/>
     </dependencies>
     <contactsmenu>
         <provider>OCA\TelephoneProvider\TelephoneProvider</provider>
