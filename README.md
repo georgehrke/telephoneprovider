@@ -3,7 +3,7 @@
 [![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/georgehrke/telephoneprovider/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/georgehrke/telephoneprovider/?branch=master)
 [![Code Coverage](https://scrutinizer-ci.com/g/georgehrke/telephoneprovider/badges/coverage.png?b=master)](https://scrutinizer-ci.com/g/georgehrke/telephoneprovider/?branch=master)
 
-This app searches your contacts for their phone numbers and shows `tel://` links in Nextcloud's new ContactsMenu, so you can call them right away.
+This app searches your contacts for their phone numbers and shows `tel:` links in Nextcloud's new ContactsMenu, so you can call them right away.
 
 Place this app in **nextcloud/apps/**
 
