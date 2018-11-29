@@ -2,9 +2,10 @@ sudo: required
 dist: trusty
 language: php
 php:
-    - 5.6
     - 7
     - 7.1
+    - 7.2
+    - 7.3
 
 addons:
   apt:
@@ -15,20 +16,19 @@ addons:
 
 env:
     global:
-        - CORE_BRANCH=stable12
-    matrix:
-        - DB=pgsql
+        - CORE_BRANCH=master
+        - DB=mysql
 
 matrix:
-    allow_failures:
-        - env: DB=pgsql CORE_BRANCH=master
     include:
+        - php: 7.1
+          env: CORE_BRANCH=stable15
+        - php: 7.0
+          env: CORE_BRANCH=stable14
         - php: 5.6
-          env: DB=sqlite
+          env: CORE_BRANCH=stable13
         - php: 5.6
-          env: DB=mysql
-        - php: 5.6
-          env: DB=pgsql CORE_BRANCH=master
+          env: CORE_BRANCH=stable12
     fast_finish: true
 
 before_install:
