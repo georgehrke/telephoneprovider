@@ -7,7 +7,7 @@
     <description><![CDATA[This app checks your contacts for telephone numbers and provides tel: links in the new Nextcloud 12 ContactsMenu.]]></description>
     <licence>agpl</licence>
     <author mail="georg-dev@ehrke.email" homepage="https://georg.coffee">Georg Ehrke</author>
-    <version>1.0.2</version>
+    <version>1.0.3</version>
     <namespace>TelephoneProvider</namespace>
     <category>social</category>
     <bugs>https://github.com/georgehrke/nextcloud-telephoneProvider/issues</bugs>
